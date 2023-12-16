@@ -119,9 +119,35 @@ function getPasswordOptions() {
 
 
   // If the user answers false for all, either return out of the function or call the function again
+  if (!(includeLower || includeUpper || includeNum || includeSpecial)) {
+    alert("At least one character set must be selected. Please try again.");
+    return getPasswordOptions(); // Call the function again
+  }
 
   // Once they select a character set:
   // Generate a random character for each selected character set
+
+  // Return an object with user-selected options
+  // return {
+  //   length,
+  //   includeLower,
+  //   includeUpper,    
+  //   includeNum,
+  //   includeSpecial,
+  // };
+
+  let choices = {
+    length: length,
+    includeLower: includeLower,
+    includeUpper: includeUpper,
+    includeNum: includeNum,
+    includeSpecial: includeSpecial
+  }
+  return choices;
+
+}
+
+
   // Either push selected character sets to a mega-array of all selected characters
   // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
   
