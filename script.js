@@ -157,11 +157,8 @@ function getRandom(arr) {
 
   let randIndex = Math.floor(Math.random() * arr.length);
   let randElement = arr[randIndex];
-
   return randElement;
-
 }
-
 
 
   // So then, mega-array[generated-index] is the actual character
