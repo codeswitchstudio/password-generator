@@ -146,17 +146,14 @@ function getPasswordOptions() {
   return choices;
 
 }
-
-  // Either push selected character sets to a mega-array of all selected characters
-  // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
   
   // Once character sets are selected, move on to generating random characters
-}
-
 // Function for getting a random element from an array
 function getRandom(arr) {
   // Need a variable to hold the password as it's being generated
   // Need a variable to hold the index that's being generated
+  // Generate a random number
+  // That number is the index for a character in the mega-array
 
   let randIndex = Math.floor(Math.random() * arr.length);
   let randElement = arr[randIndex];
@@ -166,17 +163,59 @@ function getRandom(arr) {
 }
 
 
-  // For loop that loops the number of times that matches the length the user chose
-  // Generate a random number
-  // That number is the index for a character in the mega-array
+
   // So then, mega-array[generated-index] is the actual character
   // Add that character to the password
 
   // Once we finish the for loop, return the generated password
-}
+
 
 // Function to generate password with user input
 function generatePassword() {
+
+  // Either push selected character sets to a mega-array of all selected characters
+  // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
+
+  let options = getPasswordOptions()
+ 
+  let finalResult = [];
+  let possible = [];
+  let guaranteed = [];
+  
+  if (options.includeLower ) {
+    possible = possible.concat(lowerCasedCharacters)
+    guaranteed.push(getRandom(lowerCasedCharacters))  
+  }
+  if (options.includeUpper ) {
+    possible = possible.concat(upperCasedCharacters)
+    guaranteed.push(getRandom(upperCasedCharacters))  
+  }
+  if (options.includeNum) {
+    possible = possible.concat(numericCharacters)
+    guaranteed.push(getRandom(numericCharacters))  
+  }
+  if (options.includeSpecial ) {
+    possible = possible.concat(specialCharacters)
+    guaranteed.push(getRandom(specialCharacters))  
+  }
+
+  
+   // For loop that loops the number of times that matches the length the user chose
+  for (var i=0; i < options.length; i++) {
+    let character = getRandom(possible);
+    console.log(character) 
+    finalResult.push(character)
+    console.log(finalResult);
+  }  
+
+
+  for (var i=0; i < guaranteed.length; i++) {
+    finalResult[i]=guaranteed[i];
+    console.log(finalResult)
+
+  }
+  return finalResult.join("")
+
 
 }
 
