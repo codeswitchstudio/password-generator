@@ -147,7 +147,6 @@ function getPasswordOptions() {
 
 }
 
-
   // Either push selected character sets to a mega-array of all selected characters
   // OR you can keep the arrays separate and generate a random number to select the array and another to select the index
   
@@ -158,6 +157,14 @@ function getPasswordOptions() {
 function getRandom(arr) {
   // Need a variable to hold the password as it's being generated
   // Need a variable to hold the index that's being generated
+
+  let randIndex = Math.floor(Math.random() * arr.length);
+  let randElement = arr[randIndex];
+
+  return randElement;
+
+}
+
 
   // For loop that loops the number of times that matches the length the user chose
   // Generate a random number
