@@ -103,10 +103,13 @@ function getPasswordOptions() {
        //if > 128
 
 
-       let length = parseInt(prompt("How long do you want your password to be? Type any number from 8 to 128:"));
+       let length = parseInt(prompt(`How long do you want your password to be? 
+       Type any number from 8 to 128: `));
 
       while (length < 8 || length > 128 || isNaN(length)) {
-        alert("Invalid input. (Note: Please use a number between 8 and 128 characters. Click generate password button again.)")
+        alert(`Invalid input. 
+        (Note: Please use a number between 8 and 128 characters. 
+        Click OK then the generate password button again.)`)
         return;
       }
 
