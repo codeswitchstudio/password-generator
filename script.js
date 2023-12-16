@@ -102,7 +102,6 @@ function getPasswordOptions() {
   // let length = parseInt(prompt("Enter the password length you prefer (between 8 and 128 characters):"));
  let length = (prompt("Enter the password length you prefer (between 8 and 128 characters):"));
 
-
    // If the user's input is out of range, either return out of the function or call the function again
 
   if (length < 8 || length > 128 || (isNaN(length)) {
