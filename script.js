@@ -92,18 +92,35 @@ const charOptions = [];
 const generatedPassword = '';
 // You can store the generatedPassword as a string and concat each character OR
 // as an array and push each character, then join once you have enough characters
-
 // Function to prompt user for password options
 function getPasswordOptions() {
   // Prompt for password length
   // At least 8 characters, no more than 128 characters
   // Conditional to check that the number that was entered is in range
-  // Prompts store data as strings, so need to parse into a number
-  // If the user's input is out of range, either return out of the function or call the function again
+    // Prompts store data as strings, so need to parse into a number
+
+  // let length = parseInt(prompt("Enter the password length you prefer (between 8 and 128 characters):"));
+ let length = (prompt("Enter the password length you prefer (between 8 and 128 characters):"));
+
+
+   // If the user's input is out of range, either return out of the function or call the function again
+
+  if (length < 8 || length > 128 || (isNaN(length)) {
+    alert("Sorry. Valid length is a number between 8 and 128.")
+    return;
+  }
+  
 
   // Confirm which character sets to use
-  // If the user answers false for all, either return out of the function or call the function again
   
+  let includeLower = confirm("Would you like to include lower case characters? "); 
+  let includeUpper = confirm("Would you like to include upper case characters? ");
+  let includeNum = confirm("Would you like to include numeric characters? ");
+  let includeSpecial = confirm("Would you like to include special characters? ");
+
+
+  // If the user answers false for all, either return out of the function or call the function again
+
   // Once they select a character set:
   // Generate a random character for each selected character set
   // Either push selected character sets to a mega-array of all selected characters
@@ -125,3 +142,22 @@ function getRandom(arr) {
 
   // Once we finish the for loop, return the generated password
 }
+
+// Function to generate password with user input
+function generatePassword() {
+
+}
+
+// Get references to the #generate element
+const generateBtn = document.querySelector('#generate');
+
+// Write password to the #password input
+function writePassword() {
+  const password = generatePassword();
+  const passwordText = document.querySelector('#password');
+
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword);
