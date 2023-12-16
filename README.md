@@ -33,4 +33,4 @@ https://codeswitchstudio.github.io/password-generator/
 This challenge would not have been completed without tutoring from Samuel Cordova and the pseudo code from our instructor Laura Cole.
 
 gradients from 
-![CSS Gradient](https://cssgradient.io/)
+https://cssgradient.io/
