@@ -103,7 +103,7 @@ function getPasswordOptions() {
        //if > 128
 
 
-       let length = parseInt(prompt("How long do you want this password to be? (Note: it should be between 8 and 128 characters):"));
+       let length = parseInt(prompt("How long do you want your password to be? (Note: it should be between 8 and 128 characters):"));
 
       while (length < 8 || length > 128 || isNaN(length)) {
         alert("Invalid input. (Note: Please use a number between 8 and 128 characters. Click generate password button again.)")
@@ -123,7 +123,7 @@ function getPasswordOptions() {
   let includeSpecial = confirm("Would you like to include special characters? ");
 
 // Check that at least one character set is selected
-if (!(includeNum || includeUpper || includeNum ||includeSpecial)) {
+if (!(includeLower || includeUpper || includeNum ||includeSpecial)) {
   alert("At least one character set must be selected. Please try again.");
   return getPasswordOptions(); // Call the function again
 }
