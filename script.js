@@ -104,7 +104,7 @@ function getPasswordOptions() {
 
 
        let length = parseInt(prompt(`How long do you want your password to be? 
-       Type any number from 8 to 128: `));
+       Type any number from 8 to 128: `));//added template literal bit
 
       while (length < 8 || length > 128 || isNaN(length)) {
         alert(`Invalid input. 
