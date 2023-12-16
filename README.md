@@ -6,9 +6,9 @@ An application for generating a random password based on their preferred length 
 ## Screenshots
 ![initial screen](./images/Screenshot01.png)
 ![prompt](./images/Screenshot02.png)
-![If wrong input](./images/Screenshot03.png)
-![If no character set chosen](./images/Screenshot04.png)
-![generated password](./Smages/screenshot03.png)
+![If wrong input](./images/Screenshot04.png)
+![If no character set chosen](./images/Screenshot05.png)
+![generated password](./images/Screenshot03.png)
 
 
 ## Link to deployed app
